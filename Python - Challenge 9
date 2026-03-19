@@ -1,0 +1,35 @@
+def main():
+    menu()
+
+
+def menu():
+
+    newStudent = input('Would you like to add a new student to the gradebook?: ')
+
+    while newStudent == 'yes' or newStudent == 'Yes':
+        AddStudent()
+
+    else:
+        print('Goodbye')
+
+
+def AddStudent():
+
+    name = input('Enter new students name: ')
+    grade1 = input('Enter new students 1st grade: ')
+    grade2 = input('Enter new students 2nd grade: ')
+    grade3 = input('Enter new students 3rd grade: ')
+
+    grade_value = [grade1, grade2, grade3]
+
+    StudentGradeBook(name, grade_value)
+
+def StudentGradeBook(name, grade_value):
+
+    grade_book = {'Gina': [100, 90, 10], 'Tina':[45, 50, 48], 'Rob': [78, 84, 82]}
+    
+    grade_book [name] = grade_value
+    print(grade_book)
+    exit(0)
+
+main()
