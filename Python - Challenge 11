@@ -1,0 +1,268 @@
+#Challenge 11
+
+class Humanoid:
+
+    def __init__(self, height, weight, hairColor, eyeColor, strength, dexterity, constitution, intelligence, wisdom, charasima):
+
+        self.__height = height
+        self.__weight = weight
+        self.__hairColor = hairColor
+        self.__eyeColor = eyeColor
+        self.__strength = strength
+        self.__dexterity = dexterity
+        self.__constitution = constitution
+        self.__intelligence = intelligence
+        self.__wisdom = wisdom
+        self.__charasima = charasima
+
+    def set_height(self, height):
+        self.__height = height
+
+    def set_weight(self, weight):
+        self.__weight = weight
+
+    def set_hairColor(self, hairColor):
+         self.__hairColor = hairColor
+
+    def set_eyeColor(self, eyeColor):
+        self.__eyeColor = eyeColor
+
+    def set_strength(self, strength):
+        self.__strength = strength
+
+    def set_dexterity(self, dexterity):
+         self.__dexterity = dexterity
+
+    def set_constitution(self, constitution):
+        self.__constitution = constitution
+
+    def set_intelligence(self, intelligence):
+        self.__intelligence = intelligence
+
+    def set_wisdom(self, wisdom):
+        self.__wisdom = wisdom
+
+    def set_charasima(self, charasima):
+        self.__charasima = charasima
+
+    def get_height(self):
+        return self.__height
+    
+    def get_weight(self):
+        return self.__weight
+
+    def get_hairColor(self):
+        return self.__hairColor
+    
+    def get_eyeColor(self):
+        return self.__eyeColor
+    
+    def get_strength(self):
+         return self.__strength
+    
+    def get_dexterity(self):
+        return self.__dexterity
+    
+    def get_constitutional(self):
+        return self.__constitution
+    
+    def get_intelligence(self):
+         return self.__intelligence
+    
+    def get_wisdom(self):
+        return self.__wisdom
+    
+    def get_armorRating(self):
+        return self.__armorRating
+    
+    def get_charasima(self):
+         return self.__charasima
+    
+def characterCreation():
+        
+    print('We have 3 races 1-Human, 2-Elf, and 3-Dwarf.')
+
+    creation = input('Which race have you chosen for your starting character? Number only: ')
+
+    hairColorList = ('white', 'silver', 'gray', 'black', 'brown', 'green', 'blue', 'yellow', 'pink', 'red', 'blonde')
+    eyeColorList = ('white', 'black', 'red', 'green', 'blue', 'brown', 'purple', 'amber')
+
+
+    #human
+    #while user enters 1/human as starting character
+    while creation == '1':
+
+
+            #ask user to input character height
+            hght = int(input('Enter Height; Range 3-7ft only: '))
+            if hght not in range(3,8):
+                exit(0)
+
+            #ask user to input character weight
+            wght = int(input('Enter Weight; Range 60-300lbs only: '))
+            if wght not in range(60,301):
+                exit(0)
+
+            #ask user to input characters hair color
+            print('Available hair colors: white, silver, gray, black, brown, green, blue, yellow, pink, red, blonde')
+            hrclr = input('Choose hair color from list: ')
+            if hrclr not in hairColorList:
+                exit(0)
+
+            #ask user to input characters eye color
+            print('Available eye colors: white, black, red, green, blue, brown, purple, amber')
+            eyeclr = input('Choose eye color from list: ')
+            if eyeclr not in eyeColorList:
+                exit(0)
+
+
+            #import random number in range 1-18
+            import random
+            stgth = random.randint(1,18)
+
+            import random
+            dxtrty = random.randint(1,18)
+
+            import random
+            constit = random.randint(1,18)
+
+            import random
+            intele = random.randint(1,18)
+
+            import random
+            wisd = random.randint(1,18)
+
+            import random
+            charis = random.randint(1,18)
+
+
+            #print out all character attributes
+            print('You character has the following attributes:')
+            print(f'Height: {hght}ft')
+            print(f'Weight: {wght}lbs') 
+            print(f'Hair Color: {hrclr}') 
+            print(f'Eye Color: {eyeclr}')
+            print(f'Strength: {stgth}') 
+            print(f'Dexterity: {dxtrty}')
+            print(f'Constitution: {constit}')
+            print(f'Intelligence: {intele+2}') #+ 2 to any attribute of the user's choice
+            print(f'Widsom: {wisd}')
+            print(f'Charisma: {charis}')
+            exit(0)
+            
+    #elf 
+    while creation == '2':
+
+            #copied from human while loop above 
+            #only change i made was +2 for dexterity and charisma scores when printed out
+            #added print('100% Resistance to Sleep ')
+            hght = int(input('Enter Height; Range 3-7ft only: '))
+            if hght not in range(3,8):
+                exit(0)
+
+            wght = int(input('Enter Weight; Range 60-300lbs only: '))
+            if wght not in range(60,301):
+                exit(0)
+
+            print('Available hair colors: white, silver, gray, black, brown, green, blue, yellow, pink, red, blonde')
+            hrclr = input('Choose hair color from list: ')
+            if hrclr not in hairColorList:
+                exit(0)
+
+            print('Available eye colors: white, black, red, green, blue, brown, purple, amber')
+            eyeclr = input('Choose eye color from list: ')
+            if eyeclr not in eyeColorList:
+                exit(0)
+
+            import random
+            stgth = random.randint(1,18)
+
+            import random
+            dxtrty = random.randint(1,18)
+
+            import random
+            constit = random.randint(1,18)
+
+            import random
+            intele = random.randint(1,18)
+
+            import random
+            wisd = random.randint(1,18)
+
+            import random
+            charis = random.randint(1,18)
+
+            print(f'Height: {hght}ft')
+            print(f'Weight: {wght}lbs') 
+            print(f'Hair Color: {hrclr}') 
+            print(f'Eye Color: {eyeclr}')
+            print(f'Strength: {stgth}') 
+            print(f'Dexterity: {dxtrty+2}') #Gain + 2 to their Dexterity and Charisma scores
+            print(f'Constitution: {constit}')
+            print(f'Intelligence: {intele}') 
+            print(f'Widsom: {wisd}')
+            print(f'Charisma: {charis+2}') #Gain + 2 to their Dexterity and Charisma scores
+            print('100% Resistance to Sleep ')
+            exit(0)
+      
+    #dwarf
+    while creation == '3':
+            
+            #copied from human while loop above 
+            #only change i made was +2 for strength and constitution and -2 for charisma
+            #added print('20% Reistance to magic')
+            hght = int(input('Enter Height; Range 3-7ft only: '))
+            if hght not in range(3,8):
+                exit(0)
+
+            wght = int(input('Enter Weight; Range 60-300lbs only: '))
+            if wght not in range(60,301):
+                exit(0)
+
+            print('Available hair colors: white, silver, gray, black, brown, green, blue, yellow, pink, red, blonde')
+            hrclr = input('Choose hair color from list: ')
+            if hrclr not in hairColorList:
+                exit(0)
+
+            print('Available eye colors: white, black, red, green, blue, brown, purple, amber')
+            eyeclr = input('Choose eye color from list: ')
+            if eyeclr not in eyeColorList:
+                exit(0)
+
+            import random
+            stgth = random.randint(1,18)
+
+            import random
+            dxtrty = random.randint(1,18)
+
+            import random
+            constit = random.randint(1,18)
+
+            import random
+            intele = random.randint(1,18)
+
+            import random
+            wisd = random.randint(1,18)
+
+            import random
+            charis = random.randint(1,18)
+
+            print(f'Height: {hght}ft')
+            print(f'Weight: {wght}lbs') 
+            print(f'Hair Color: {hrclr}') 
+            print(f'Eye Color: {eyeclr}')
+            print(f'Strength: {stgth+2}') #Gain + 2 bonus to Strength and Constiution
+            print(f'Dexterity: {dxtrty}')
+            print(f'Constitution: {constit+2}') #Gain + 2 bonus to Strength and Constiution
+            print(f'Intelligence: {intele}') 
+            print(f'Widsom: {wisd}')
+            print(f'Charisma: {charis-2}') #-2 score to Charisma
+            print('20% Reistance to magic')
+            exit(0)
+
+
+def main():
+    characterCreation()
+
+if __name__== '__main__':
+    characterCreation()
