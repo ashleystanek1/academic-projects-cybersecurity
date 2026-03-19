@@ -1,0 +1,34 @@
+#challenge 06
+
+def main():
+
+    FileControl()
+
+def FileControl():
+
+    inFile = open(r'/Users/ashleystanek/Desktop/FunWithFiles.txt', 'r')
+
+    line1 = inFile.readline()
+    line2 = inFile.readline()
+    line3 = inFile.readline()
+
+
+    line1 = line1.rstrip('\n')
+    line2 = line2.rstrip('\n')
+    line3 = line3.rstrip('\n')
+
+    movie1 = input('Users favorite movie choice: ')
+
+    myFile = open(r'/Users/ashleystanek/Desktop/FunWithFiles.txt', 'a')
+
+    myFile.write(movie1 + '\n')
+
+
+    inFile.close()
+
+    print(line1)
+    print(line2)
+    print(line3)
+    print(movie1)
+
+main()
