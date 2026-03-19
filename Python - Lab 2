@@ -1,0 +1,47 @@
+def main():
+    fileScanner()
+
+def fileScanner():
+    
+    #open file
+    inFile = open(r'/Users/ashleystanek/Desktop/Numbers_in_text.txt', 'r')
+    
+    #processed list
+    processed_list = []
+
+    #find numeric in file and append to processed list
+    for lines in inFile:
+        for i in lines.split(' '):
+            if i.isnumeric() == True:
+                processed_list.append(int(i))
+
+    #print to make sure list looks correct
+    print(processed_list)
+
+    #pass values of processed list to unsorted list
+    dataProcessor(processed_list)
+     
+
+def dataProcessor(unsorted_list):
+
+    #sorted list
+    sorted_list = []
+
+    #sort unsorted_list
+    sorted_list = sorted(unsorted_list)
+    print(sorted_list)
+
+    #print length of sorted_list
+    length = len(sorted_list)
+    print(length)
+
+    #import statistics/median to get middle value
+    import statistics
+
+    #find median of sorted list
+    middle_number = statistics.median(sorted_list)
+    print(middle_number)
+
+
+main()
+
