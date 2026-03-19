@@ -1,0 +1,17 @@
+#choose number between 1-50
+guess_number = input("Choose a number 1-50: ")
+
+#if the number input is 30 it is the correct answer
+if guess_number == "30":
+    print("Congratulations. You guessed the correct number.")
+
+#if the number is within 5 numbers of 30 print ypu were within 5
+# of the correct value
+
+elif guess_number >= "25" and guess_number <= "35":
+    print("You were within 5 numbers of the correct value.")
+
+
+#all other numbers input are incorrect
+else:   
+    print("That is not the correct number.")
