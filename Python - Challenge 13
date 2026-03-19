@@ -1,0 +1,13 @@
+#challenge 13
+
+import re
+
+pattern = r"^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+
+phoneNumber = input('Please enter your phone number: ')
+
+if re.match(pattern, phoneNumber):
+    print(phoneNumber, 'is a valid phone number.')
+
+else:
+    print('That is not a valid phone number.')
