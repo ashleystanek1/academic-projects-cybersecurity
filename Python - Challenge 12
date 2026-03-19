@@ -1,0 +1,55 @@
+#Challenge 12
+
+def factorial(n):
+
+    if n == 0:
+        return 1
+    
+    else:
+        return n * factorial(n - 1)
+
+def findPrime(n, i=2):
+
+        #get number from user
+        enteredNumber = int(input('Enter a number to see if it is prime: '))
+
+        notPrime = False
+
+        if n == 1:
+            print(enteredNumber, 'is not prime.')
+
+        if enteredNumber > 1:
+            for i in range(2, enteredNumber):
+                if (enteredNumber % i) == 0:
+                    notPrime = True
+                
+        if notPrime:
+            print(enteredNumber, 'is not prime.')
+
+        else:
+            print(enteredNumber, 'is prime.')
+
+def menu():
+
+    #ask user to choose factorial or prime
+    decision = int(input("Please enter 1 for factorial or 2 for prime: "))
+
+    #if user chooses factorial ask them to enter a number
+    #print result from def factorial(n):
+    #exit function
+    if decision == 1:
+        num = int(input("Enter a number to see it's factorial: "))
+        result = factorial(num)
+        print(result)
+        exit(0)
+
+    #if prime is chosen pass decision to def findPrime(n, i=2): function
+    if decision == 2:
+        findPrime(decision)
+
+    else:
+        print('Please try again, Number entered must be either 1 or 2. ')
+        menu()
+
+if __name__ == "__main__":
+    menu()
