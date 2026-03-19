@@ -1,0 +1,17 @@
+#Ashley Stanek
+#Challenge 02
+
+#insert name 
+insert_name = input('Enter your name: ')
+
+#enter birth year
+birth_year = int(input('Enter your birth year: '))
+
+#subtract 2022 from birth year
+current_year = 2023
+
+
+#print out answers
+print('Your name is', insert_name)
+print('You were born in', birth_year)
+print(f'That makes you approximately', current_year - birth_year , 'years old.')
