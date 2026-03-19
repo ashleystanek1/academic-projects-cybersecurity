@@ -1,0 +1,12 @@
+#Enter First and Last Name
+#Insert Major and undergrad status
+#Enter programming experience
+first_name = input('Enter your first name: ')
+last_name = input('Enter your last name: ')
+my_major = input('Enter your major: ')
+undergrad_status = input('Enter undergraduate status here: ')
+programming_experience = input('Enter what programming experience you have: ')
+print('Hello, my name is', first_name, last_name)
+print('My major is', my_major) 
+print('I am a', undergrad_status, '.')
+print('I have programming experience with the following language(s)', programming_experience)
