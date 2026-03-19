@@ -1,0 +1,51 @@
+#Challenge 10
+
+
+class PlayerCharacter:
+
+    def __init__(self, health, armorRating, attackPower):
+
+        self.__health = health
+        self.__armorRating = armorRating
+        self.__attackPower = attackPower
+
+
+    def set_health(self, health):
+        self.__health = health
+
+    def set_armorRating(self, armorRating):
+        self.__armorRating = armorRating
+
+    def set_attackPower(self, attackPower):
+         self.__attackPower = attackPower
+
+
+    def get_health(self):
+        return self.__health
+    
+    def get_armorRating(self):
+        return self.__armorRating
+    
+    def get_attackPower(self):
+         return self.__attackPower
+    
+
+def playerState():
+              
+        hlth = int(input('Enter Health; Range 1-100 only: '))
+        if hlth not in range(1,101):
+             exit(0)
+        armrRtng = int(input('Enter Armor Rating; Range 1-20 only: '))
+        if armrRtng not in range(1,21):
+            exit(0)
+        attkPwr = int(input('Enter Attack Power; Range 1-20 only: '))
+        if attkPwr not in range(1,21):
+             exit(0)
+
+        character = PlayerCharacter(hlth, armrRtng, attkPwr)
+
+        print(f'The health is at {character.get_health()}. The Armor Rating is at {character.get_armorRating()}. The Attack power is at {character.get_attackPower()}')
+
+if __name__== '__main__':
+
+    playerState()
