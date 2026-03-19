@@ -1,0 +1,41 @@
+#Ashley_Stanek_challenge_04.py
+
+#correct number is 41
+prize = 41
+
+#ask player if they want to play a game
+play_game = input("Would you like to Guess a Number, Win a Prize? yes or no: ")
+
+#the value of the accumulator will start at 0
+i = 0
+
+#if user says "yes" begin program
+while play_game == "yes":   
+    
+#if user says yes ask them to pick a number 1-50
+    guess_number = int(input("Pick a number 1-50: "))
+    
+#if number is not between 1-50 say error try again 
+    if guess_number < 1: 
+        print("Error, must pick a number between 1-50. ")
+        
+    if guess_number > 50:
+        print("Error, must pick a number between 1-50. ")
+
+ #while user is not equal to 41
+    while guess_number != prize:
+        i+= 1
+        print("Attempt", i)
+        if guess_number >= 36 and guess_number <= 46:
+            print("You were within 5 numbers of the correct value.")
+        print("This is not the correct number. ")
+        guess_number = int(input("Pick a number 1-50: "))
+  
+#if user chooses 41 print "Congratulations!" then break   
+    if guess_number == prize:
+        i+=1
+        print("Attempt", i)
+        print("Congratulations!")
+    
+        break
+    break
